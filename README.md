@@ -57,3 +57,9 @@ And a little bit of CSS
   } 
 }
 ```
+These three data attributes cover most scrolling situations. You can get more informaiton on accessing data attributes [here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes). Please note that this does not support horizontal scrolling and that (for now) visibility is only calculated in terms of the viewport as a whole not any particular element.
+
+Finally, you might need to manually call the `bind()` function if you include the script in the head of your page or dynamically add tscroll elements after the script has loaded. Calliing `bind` ensures that all of the elements with the `tscroll` class are tracked. 
+
+### Smooth Scrolling
+To use smooth scrolling, call `tscrollTo(element)`. This will smoothly scroll to the top of `element`. You can also pass in `body` to smoothly scroll to the top of the page. If a user tries to scroll during the automatic scroll, the automatic scrolling is canceled.   
